@@ -29,7 +29,7 @@ This is a lightweight internal tool built with **Streamlit** to help support age
 ### 1. Clone the Repo
 
     git clone <your-repo-url>
-    cd mood-of-the-queue
+    cd moodqueue
 
 
 ### 2. Install Requirements
