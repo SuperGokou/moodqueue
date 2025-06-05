@@ -29,8 +29,6 @@ captions = [
 emoji_list = ["😊", "😠", "😕", "🎉"]
 
 
-conn = st.connection("gsheets", type=GSheetsConnection)
-existing_entries = conn.read(worksheet='MoodQueue', ttl='10s')
 
 # ----------------- UI Elements -----------------#
 with st.sidebar:
@@ -52,6 +50,8 @@ with st.sidebar:
 # ------------------ UI Elements --------------------#
 
 # --- Google Sheets Connection and Data Handling --- #
+    conn = st.connection("gsheets", type=GSheetsConnection)
+    existing_entries = conn.read(worksheet='MoodQueue', ttl='10s')
 
     if submit_button:
         
