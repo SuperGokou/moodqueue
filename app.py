@@ -33,9 +33,8 @@ emoji_list = ["😊", "😠", "😕", "🎉"]
 with st.sidebar:
     st.header('📊 Mood of the Queue')
     st.markdown("***")
-    
-    st.write(':rainbow[**How\'s your day going?**]')
-    mood = st.radio('', emoji_list, captions = captions, horizontal=True)
+        
+    mood = st.radio(':rainbow[**How\'s your day going?**]', emoji_list, captions = captions, horizontal=True)
 
     mood = mood_map[mood]
 
