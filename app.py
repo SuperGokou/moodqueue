@@ -6,9 +6,9 @@ from streamlit_autorefresh import st_autorefresh
 
 
 
-# -------- Auto-refresh every 3 seconds ----------#
+# -------- Auto-refresh every 10 seconds ----------#
 
-st_autorefresh(interval=3000, key="datarefresh") 
+st_autorefresh(interval=10000, key="datarefresh") 
 
 
 # ------------------ Constants ------------------ #
@@ -28,8 +28,9 @@ captions = [
 
 emoji_list = ["😊", "😠", "😕", "🎉"]
 
+
 conn = st.connection("gsheets", type=GSheetsConnection)
-existing_entries = conn.read(worksheet='MoodQueue', ttl='60s')
+existing_entries = conn.read(worksheet='MoodQueue', ttl='10s')
 
 # ----------------- UI Elements -----------------#
 with st.sidebar:
